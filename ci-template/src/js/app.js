@@ -7,9 +7,8 @@ const person3 = new Character('davi', 12);
 
 const team = new Team();
 
-team.info();
 team.add(person1);
-team.add(person2);
 team.add(person3);
+team.add(person2);
 
 team.info()

@@ -4,6 +4,14 @@ class Team {
   }
 
   add(member) {
+    const serializedMember = JSON.stringify(member);
+    
+    this.members.forEach(member => {
+      if (JSON.stringify(member) === serializedMember) {
+        throw new Error('member already exists!');
+      }
+    });
+
     this.members.add(member);
   }
 
