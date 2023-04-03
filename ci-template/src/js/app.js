@@ -1,6 +1,15 @@
-// TODO: write your code here
-import sum from './basic';
+import Team from "./Team";
+import Character from "./Character";
 
-console.log('worked');
+const person1 = new Character('jogn', 20);
+const person2 = new Character('jogn', 20);
+const person3 = new Character('davi', 12);
 
-console.log(sum([1, 2]));
+const team = new Team();
+
+team.info();
+team.add(person1);
+team.add(person2);
+team.add(person3);
+
+team.info()
