@@ -15,6 +15,20 @@ class Team {
     this.members.add(member);
   }
 
+  addAll(...members) {
+    try {
+      for (let i = 0; i < members.length; i++) {
+        this.add(members[i]);
+      }
+    } catch(e) {
+      console.log('error addall logged')
+    }
+  }
+
+  toArray() {
+    return Array.from(this.members);
+  }
+
   info() {
     console.log(this.members);
   }
